@@ -1,0 +1,21 @@
+{
+  "name": "je-suis-swift",
+  "version": "1.0.0",
+  "description": "Vote for Taylor Swift in Triple J's Hottest 100",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "@karlbright",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^4.5.0",
+    "ecstatic": "^0.5.8",
+    "express": "^4.11.0",
+    "kue": "^0.8.11",
+    "routes": "^2.0.0",
+    "trumpet": "^1.7.0",
+    "xtend": "^4.0.0",
+    "zombie": "^2.5.1"
+  }
+}

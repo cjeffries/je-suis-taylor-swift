@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#JeSeuisTaylorSwift</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/jesuis.css" />
+  </head>
+  <body id="body">
+    <div class="container">
+      <h1>Je Suis Taylor Swift</h1>
+      <h2>Vote for Taylor Swift's "Shake It Off" in the Triple J Hottest 100.</h2>
+      <div id="submission">
+        <p>Enter your details below and we'll take care of the process for you, you'll need to click the confirmation link in the email Triple J sends you.</p>
+        <form action="/submit" method="post">
+          <div class="row">
+            <div class="col-sm-3">
+              <input name="firstName" id="firstName" type="text" class="form-control input-lg" placeholder="First Name" />
+            </div>
+            <div class="col-sm-3">
+              <input name="lastName" id="lastName" type="text" class="form-control input-lg" placeholder="Last Name" />
+            </div>
+            <div class="col-sm-3">
+              <input name="emailAddress" id="emailAddress" type="email" class="form-control input-lg" placeholder="Email Address" />
+            </div>
+            <div class="col-sm-3">
+              <input type="submit" class="btn btn-lg btn-primary btn-block" value="Vote" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </body>
+</html>

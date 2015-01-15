@@ -1,0 +1,43 @@
+html {
+  background: url(bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background: none;
+  text-align: center;
+  color: #fff;
+  padding-top: 80px;
+}
+
+h1 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 64px;
+  font-weight: 200;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ddd;
+  line-height: 44px;
+  margin-bottom: 50px;
+}
+
+p {
+  color: #aaa;
+  font-size: 18px;
+}
+
+form {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+input { margin-bottom: 10px; }
