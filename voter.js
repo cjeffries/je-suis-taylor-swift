@@ -4,8 +4,13 @@ var Browser = require('zombie');
 
 function Vote(job, cb) {
   var browser = Browser.create();
+  browser.silent = true;
 
   browser.on('error', function(err) {
+    cb(new Error(err));
+  });
+
+  process.once('uncaughtException', function(err) {
     cb(new Error(err));
   });
 
@@ -16,12 +21,17 @@ function Vote(job, cb) {
       .fill('track[]', 'Shake It Off')
       .pressButton('Add to shortlist', function(err) {
         job.progress(30, 100);
-        browser.wait(30, function() {
+
+        function gotConfirm() {
+          return window.document.querySelector('a.confirm');
+        }
+
+        browser.wait(gotConfirm, function() {
           function trackVoted() {
             return window.document.querySelector('div.shortlist-block .shortlist .item.checked .confirm');
           }
 
-          browser.clickLink('a[title="confirm Shake It Off by Taylor Swift track"]');
+          browser.clickLink('a.confirm');
           job.progress(45, 100);
 
           browser.wait(trackVoted, function() {
