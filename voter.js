@@ -5,6 +5,10 @@ var Browser = require('zombie');
 function Vote(job, cb) {
   var browser = Browser.create();
 
+  browser.on('error', function(err) {
+    cb(new Error(err));
+  });
+
   browser.visit('http://hottest100.triplej.net.au/shortlist/add', function() {
     job.progress(15, 100);
     browser.fill('artist[]', 'Taylor Swift')

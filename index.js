@@ -23,7 +23,7 @@ router.addRoute('/test', function(req, res, params) {
 });
 
 router.addRoute('/submit', post(function(req, res, params) {
-  jobs.create('vote', params).save();
+  jobs.create('vote', xtend(params, {title: 'A vote from ' + params.firstName + ' ' + params.lastName})).save();
   layout(res).end('<p>Great! You will receive an email with a confirmation link from Triple J soon, make sure you click it. In the meantime, why not tell everyone and help Taylor out by tweeting?</p><br /><p><a class="twitter-share-button" href="https://twitter.com/share" data-text="I just voted for Taylor Swift - Shake It Off in the #hottest100 #JeSuisTaylorSwift #Tay4Hottest100" data-size="large" data-count="none" data-url="http://taylorswift.io">Tweet</a></p>');
 }));
 
