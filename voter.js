@@ -16,11 +16,11 @@ function Vote(job, cb) {
 
   browser.visit('http://hottest100.triplej.net.au/shortlist/add', function() {
     job.progress(15, 100);
-    browser.wait(30, function() {
+    browser.wait(10000, function() {
       browser.fill('artist[]', 'Taylor Swift')
       .fill('track[]', 'Shake It Off')
       .pressButton('Add to shortlist', function(err) {
-        job.progress(30, 100);
+        job.progress(10000, 100);
 
         function gotConfirm() {
           return window.document.querySelector('a.confirm');
@@ -37,7 +37,7 @@ function Vote(job, cb) {
           browser.wait(trackVoted, function() {
             browser.clickLink('a[href="http://hottest100.triplej.net.au/vote/index"]', function() {
               job.progress(65, 100);
-              browser.wait(30, function(){
+              browser.wait(10000, function(){
                 browser.visit('http://hottest100.triplej.net.au/vote/index', function() {
                   console.log(browser.evaluate('window.location.href'));
                   job.progress(80, 100);
@@ -46,7 +46,7 @@ function Vote(job, cb) {
                   .fill('#email', job.data.emailAddress);
                   job.progress(95, 100);
 
-                  browser.wait(30, function() {
+                  browser.wait(10000, function() {
                     browser.pressButton('button.submit');
                     job.progress(100, 100);
                     cb();
