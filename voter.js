@@ -23,7 +23,7 @@ function Vote(job, cb) {
 
   function addTrack() {
     job.progress(25, 100);
-    $.capture(__dirname + '/25.png');
+    //$.capture(__dirname + '/25.png');
     $('input[ng-model="artistQuery"]').val('Taylor Swift', function() {
       showProgress('Filled Artist');
       $('input[ng-model="trackQuery"]').val('Shake It Off', function() {
@@ -37,7 +37,7 @@ function Vote(job, cb) {
     showProgress('Track added');
     $.waitForPage(function(){
     job.progress(50, 100);
-      $.capture(__dirname + '/50.png');
+      //$.capture(__dirname + '/50.png');
       $.getPage(function(page) {
         page.evaluate(function(){
           return angular.element($('a.confirm')).triggerHandler('click');
@@ -67,7 +67,7 @@ function Vote(job, cb) {
     //$.visit('https://hottest100.triplej.net.au/vote/index', function() {
     $.waitForPage(function() {
       job.progress(75,100);
-      $.capture(__dirname + '/75.png');
+      //$.capture(__dirname + '/75.png');
       showProgress('Loading "Your Details" page');
       $('input#firstname').val(job.data.firstName, function() {
         showProgress('Filled first name');
