@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "body": "^4.5.0",
+    "chalk": "^0.5.1",
     "ecstatic": "^0.5.8",
     "express": "^4.11.0",
+    "jquerygo": "https://github.com/karlbright/jquery.go.js/tarball/master",
     "kue": "^0.8.11",
     "routes": "^2.0.0",
     "trumpet": "^1.7.0",
